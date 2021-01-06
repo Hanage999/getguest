@@ -20,10 +20,10 @@ type Prog struct {
 // Radiko はRadiko週間番組表（局ごと）を格納する
 type Radiko struct {
 	XMLName  xml.Name `xml:"radiko"`
-	Stations struct {
-		Station struct {
+	Stations *struct {
+		Station *struct {
 			Name string `xml:"name"`
-			Days []struct {
+			Days []*struct {
 				Date     string  `xml:"date"`
 				Programs []*Prog `xml:"prog"`
 			} `xml:"progs"`
